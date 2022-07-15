@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+
+@model CompaniesDto
+
+<div class="col-lg-4">
+  <div class="card bg-primary border-primary text-white-50">
+   <div class="card-body">
+
+         <form asp-controller="Companies" method="post" asp-action="Update" class="needs-validation" novalidate>
+              <input type="hidden" asp-for="Id" id="CompaniesIdSave" />
+              <input type="hidden" asp-for="Name" id="CompaniesNameSave " />
+                
+            
+          
+          <div class=" mb-3 row">
+          <label asp-for="Name" class="col-md-2 col-form-label"></label>
+           <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesNameSave" placeholder="Name" asp-for="Name" required >
+           <div class"invalid-feedback">Lütfen Name Alanını Boş Bırakmayınız</div>
+          
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="TaxOffice" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesTaxOfficeSave" placeholder="TaxOffice" asp-for="TaxOffice" required>
+            <div class"invalid-feedback">Lütfen Vergi Dairesi Alanını Boş Bırakmayınız</div>
+        
+
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="TaxNumber" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesTaxNumberSave" placeholder="TaxNumber" asp-for="TaxNumber" required>
+            <div class"invalid-feedback">Lütfen Vergi Numarası Alanını Boş Bırakmayınız</div>
+        
+
+           </div>
+           </div>
+
+
+            <div class="mb-3 row">
+         <label asp-for="Province" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesProvinceSave" placeholder="Province" asp-for="Province" required>
+          <div class"invalid-feedback">Lütfen İl Alanını Boş Bırakmayınız</div>
+         
+
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="District" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesDistrictSave" placeholder="District" asp-for="District" required>
+           <div class"invalid-feedback">Lütfen İlçe Alanını Boş Bırakmayınız</div>
+         
+
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="CompanyType" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesCompanyTypeSave" placeholder="CompanyType" asp-for="CompanyType" required>
+           <div class"invalid-feedback">Lütfen Şirket Tipi Alanını Boş Bırakmayınız</div>
+         
+
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="Address" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="CompaniesAddressSave" placeholder="Address" asp-for="Address" required>
+           <div class"invalid-feedback">Lütfen Adres Alanını Boş Bırakmayınız</div>
+         
+
+           </div>
+           </div>
+
+          <div class="mb-3 row">
+              <div class="col-md-6">
+           <button type="submit" class="btn btn-light btn-sm waves-effect waves-light w-md" >Ekle</button>
+            </div>
+            </div>
+
+
+          </form>
+
+         </div><!-- end card-body -->
+      </div><!-- end card -->
+</div>
+

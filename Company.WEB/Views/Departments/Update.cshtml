@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+
+@model DepartmentsDto
+
+<div class="col-lg-4">
+  <div class="card bg-primary border-primary text-white-50">
+   <div class="card-body">
+
+         <form asp-controller="Departments" method="post" asp-action="Update" class="needs-validation" novalidate>
+              <input type="hidden" asp-for="Id" id="DepartmentsIdSave" />
+        
+                
+            
+          
+          <div class=" mb-3 row">
+          <label asp-for="Name" class="col-md-2 col-form-label"></label>
+           <div class="col-md-6">
+          <input type="text" class="form-control" id="DepartmentsNameSave" placeholder="Name" asp-for="Name" required >
+           <div class"invalid-feedback">Lütfen Ad Alanını Boş Bırakmayınız</div>
+          
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="CompanyID" class="col-md-2 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="DepartmentsCompanyIDSave" placeholder="CompanyID" asp-for="CompanyID" required>
+            <div class"invalid-feedback">Lütfen Şirket ID Alanını Boş Bırakmayınız</div>
+        
+
+           </div>
+           </div>
+
+           
+
+          <div class="mb-3 row">
+              <div class="col-md-6">
+           <button type="submit" class="btn btn-light btn-sm waves-effect waves-light w-md" >Ekle</button>
+            </div>
+            </div>
+
+
+          </form>
+
+         </div><!-- end card-body -->
+      </div><!-- end card -->
+</div>
+

@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Save";
+}
+
+@model SubDepartmentsDto  
+
+
+<div class="col-lg-4">
+  <div class="card bg-primary border-primary text-white-50">
+   <div class="card-body">
+
+         <form asp-controller="Subdepartments" method="post" asp-action="Save" class="needs-validation" novalidate>
+
+
+          
+          
+          
+          <div class=" mb-3 row">
+          <label asp-for="Name" class="col-md-8 col-form-label"></label>
+           <div class="col-md-6">
+          <input type="text" class="form-control" id="SubDepartmentsNameSave" placeholder="Alt Departman Adı" asp-for="Name" required >
+           <div class"invalid-feedback">Lütfen Ad Alanını Boş Bırakmayınız</div>
+          
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="DepartmentsId" class="col-md-8 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="SubDepartmentsDepartmentsIDSave" placeholder="Departman ID " asp-for="DepartmentsId" required>
+            <div class"invalid-feedback">Lütfen Departman Id Alanını Boş Bırakmayınız</div>
+        
+
+           </div>
+           </div>
+
+           <div class="mb-3 row">
+         <label asp-for="CompanyId" class="col-md-8 col-form-label"></label>
+         <div class="col-md-6">
+          <input type="text" class="form-control" id="SubDepartmentsCompanyIDSave" placeholder="Şirket ID " asp-for="CompanyId" required>
+            <div class"invalid-feedback">Lütfen Şirket Id Alanını Boş Bırakmayınız</div>
+        
+
+           </div>
+           </div>
+           
+
+          <div class="mb-3 row">
+              <div class="col-md-6">
+           <button type="submit" class="btn btn-light btn-sm waves-effect waves-light w-md" >Ekle</button>
+            </div>
+            </div>
+
+
+          </form>
+
+         </div><!-- end card-body -->
+      </div><!-- end card -->
+</div>
